@@ -1,3 +1,3 @@
-# Micronaut with Kotlin, Hibernate and PostreSQL example
+# Micronaut with Kotlin, Hibernate and PostgreSQL example
 
-Example app using Micronaut with Kotlin, Hibernate and PostreSQL
+Example app using Micronaut with Kotlin, Hibernate and PostgreSQL

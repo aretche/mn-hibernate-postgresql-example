@@ -37,7 +37,7 @@ dependencies {
     kaptTest platform("io.micronaut:micronaut-bom:$micronautVersion")
     kaptTest "io.micronaut:micronaut-inject-java"
     runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
-    runtimeOnly "com.h2database:h2"
+    runtimeOnly "org.postgresql:postgresql"
     runtimeOnly "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
     testImplementation platform("io.micronaut:micronaut-bom:$micronautVersion")
     testImplementation "io.micronaut.test:micronaut-test-kotlintest"

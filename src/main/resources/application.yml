@@ -8,14 +8,16 @@ datasources.default: {}
 ---
 datasources:
   default:
-    url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''    
+    default:
+      url: ${JDBC_URL:`jdbc:postgresql://localhost/persistence`}
+      username: ${JDBC_USER:postgres}
+      password: ${JDBC_PASSWORD:postgres}
 jpa:
   default:
+    packages-to-scan:
+      - 'example.micronaut.domain'
     properties:
       hibernate:
         hbm2ddl:
           auto: update
-
+        show_sql: true
