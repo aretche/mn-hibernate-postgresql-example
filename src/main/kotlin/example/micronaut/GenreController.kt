@@ -13,7 +13,14 @@ import javax.validation.Valid
 class GenreController(protected val genreRepository: GenreRepository) {
 
     @Get("/{id}")
-    fun show(id: Long): Genre? = genreRepository.findById(id)
+    fun show(id: Long): HttpResponse<Any> {
+        val planillaRevision = genreRepository.findById(id)
+        return if(null != planillaRevision){
+            HttpResponse.ok(planillaRevision)
+        } else {
+            HttpResponse.notFound(Error(code = 404, message = "Genre not found"))
+        }
+    }
 
     @Put("/")
     fun update(@Body @Valid command: GenreUpdateCommand): HttpResponse<Any> {
