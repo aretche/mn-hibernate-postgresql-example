@@ -1,10 +1,10 @@
 package example.micronaut
 
+import example.micronaut.domain.Genre
 import io.micronaut.http.HttpHeaders
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.*
 import io.micronaut.validation.Validated
-import example.micronaut.domain.Genre
 import java.net.URI
 import javax.validation.Valid
 
@@ -15,7 +15,7 @@ class GenreController(protected val genreRepository: GenreRepository) {
     @Get("/{id}")
     fun show(id: Long): HttpResponse<Any> {
         val planillaRevision = genreRepository.findById(id)
-        return if(null != planillaRevision){
+        return if (null != planillaRevision) {
             HttpResponse.ok(planillaRevision)
         } else {
             HttpResponse.notFound(Error(code = 404, message = "Genre not found"))

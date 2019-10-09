@@ -3,7 +3,7 @@ package example.micronaut
 import io.micronaut.context.annotation.ConfigurationProperties
 
 @ConfigurationProperties("application")
-class ApplicationConfigurationProperties: ApplicationConfiguration {
+class ApplicationConfigurationProperties : ApplicationConfiguration {
 
     private val defaultMax = 10
 

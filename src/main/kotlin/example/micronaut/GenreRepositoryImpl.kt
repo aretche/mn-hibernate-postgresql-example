@@ -1,11 +1,11 @@
 package example.micronaut
 
-import javax.persistence.EntityManager
+import example.micronaut.domain.Genre
 import io.micronaut.configuration.hibernate.jpa.scope.CurrentSession
 import io.micronaut.spring.tx.annotation.Transactional
-import example.micronaut.domain.Genre
 import java.util.*
 import javax.inject.Singleton
+import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
 import javax.validation.constraints.NotBlank
 
